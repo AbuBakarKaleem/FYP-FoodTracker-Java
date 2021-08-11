@@ -1,3 +1,47 @@
 <resources>
     <string name="app_name">FoodTracker</string>
+
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="required">Required</string>
+    <string name="invalidEmail">Invalid Email</string>
+    <string name="signup">Resgistration</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="address">Address</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="password_length_error">Password should be more then 3 characters</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_history">History</string>
+    <string name="menu_slideshow">Log Out</string>
+    <string name="lunch">Lunch</string>
+    <string name="breakfast">Breakfast</string>
+    <string name="dinner">Dinner</string>
+    <string name="snacks">Snacks</string>
+    <string name="select_date">Select Date</string>
+    <string name="select_time">Select Time</string>
+    <string name="save">Save</string>
+    <string name="user_register_successsfully">User Register Successfully</string>
+    <string name="user_not_register">User Did Not Register </string>
+    <string name="user_already_register">Email already exist </string>
+    <string name="something_went_wrong">Something went wrong . Please try again </string>
+    <string name="select_meal">Selected Meal: </string>
+    <string name="meal_insert_message">Meal Information Saved Successfully</string>
+    <string name="meal_insert_fail_message">Meal Information Not Saved</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="no_data_found">No Data Found!!</string>
+    <string name="share">Share</string>
+    <string name="invalidPhone">Invalid Phone Number</string>
+    <string name="invalidEmailOrPassword">Invalid Email Or Password</string>
 </resources>
