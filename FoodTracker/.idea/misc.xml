@@ -3,10 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android Projects/Git Projects/FYP-FoodTracker-Java/FoodTracker/app/src/main/res/drawable/ic_baseline_history_24.xml" value="0.20833333333333334" />
+        <entry key="..\:/Android Projects/Git Projects/FYP-FoodTracker-Java/FoodTracker/app/src/main/res/drawable/ic_baseline_power_settings_new_24.xml" value="0.20833333333333334" />
         <entry key="..\:/Android Projects/Git Projects/FYP-FoodTracker-Java/FoodTracker/app/src/main/res/layout/activity_login.xml" value="0.1921875" />
         <entry key="..\:/Android Projects/Git Projects/FYP-FoodTracker-Java/FoodTracker/app/src/main/res/layout/activity_sign_up.xml" value="0.1213768115942029" />
+        <entry key="..\:/Android Projects/Git Projects/FYP-FoodTracker-Java/FoodTracker/app/src/main/res/layout/add_food_record_fragment.xml" value="0.11548913043478261" />
         <entry key="..\:/Android Projects/Git Projects/FYP-FoodTracker-Java/FoodTracker/app/src/main/res/layout/content_home.xml" value="0.11548913043478261" />
+        <entry key="..\:/Android Projects/Git Projects/FYP-FoodTracker-Java/FoodTracker/app/src/main/res/layout/fragment_history.xml" value="0.11548913043478261" />
+        <entry key="..\:/Android Projects/Git Projects/FYP-FoodTracker-Java/FoodTracker/app/src/main/res/layout/fragment_home.xml" value="0.1921875" />
+        <entry key="..\:/Android Projects/Git Projects/FYP-FoodTracker-Java/FoodTracker/app/src/main/res/layout/fragment_slideshow.xml" value="0.11548913043478261" />
+        <entry key="..\:/Android Projects/Git Projects/FYP-FoodTracker-Java/FoodTracker/app/src/main/res/layout/history_fragment.xml" value="0.11548913043478261" />
         <entry key="..\:/Android Projects/Git Projects/FYP-FoodTracker-Java/FoodTracker/app/src/main/res/layout/history_list_item.xml" value="0.1213768115942029" />
+        <entry key="..\:/Android Projects/Git Projects/FYP-FoodTracker-Java/FoodTracker/app/src/main/res/layout/nav_header_home.xml" value="0.11548913043478261" />
+        <entry key="..\:/Android Projects/Git Projects/FYP-FoodTracker-Java/FoodTracker/app/src/main/res/menu/activity_main_drawer.xml" value="0.1921875" />
       </map>
     </option>
   </component>

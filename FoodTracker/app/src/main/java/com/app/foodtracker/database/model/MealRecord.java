@@ -19,6 +19,13 @@ public class MealRecord {
     @ColumnInfo(name = MEAL_COL_TIME) String mealTime;
     @ColumnInfo(name = MEAL_COL_DESCRIPTION) String mealDescription;
 
+    public MealRecord(String mealType, String mealDate, String mealTime, String mealDescription) {
+        this.mealType = mealType;
+        this.mealDate = mealDate;
+        this.mealTime = mealTime;
+        this.mealDescription = mealDescription;
+    }
+
     public int getMealID() {
         return mealID;
     }

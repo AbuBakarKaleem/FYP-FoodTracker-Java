@@ -9,9 +9,10 @@ import static com.app.foodtracker.Utils.Utils.USER_COL_PHONE_NUMBER;
 
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
+import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-
+@Entity(tableName = "Users")
 public class User {
 
     @ColumnInfo(name = USER_COL_FIRST_NAME) String firstName;
