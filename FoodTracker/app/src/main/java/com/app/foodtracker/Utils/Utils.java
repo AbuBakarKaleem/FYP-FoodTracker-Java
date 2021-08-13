@@ -22,10 +22,10 @@ public class Utils {
        public static  final String MEAL_COL_TIME = "time";
        public static  final String MEAL_COL_DESCRIPTION = "description";
 
-       public static String STR_BREAKFAST="Breakfast";
-       public static String STR_LUNCH="Lunch";
-       public static String STR_DINNER="Dinner";
-       public static String STR_SNACKS="Snacks";
+       public static final String STR_BREAKFAST="Breakfast";
+       public static final String STR_LUNCH="Lunch";
+       public static final String STR_DINNER="Dinner";
+       public static final String STR_SNACKS="Snacks";
 
     Pattern EMAIL_ADDRESS = Pattern.compile(
             "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +

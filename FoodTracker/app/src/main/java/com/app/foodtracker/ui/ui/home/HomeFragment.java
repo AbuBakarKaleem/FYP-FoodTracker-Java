@@ -11,7 +11,10 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavDirections;
+import androidx.navigation.Navigation;
 
+import com.app.foodtracker.R;
 import com.app.foodtracker.Utils.Utils;
 import com.app.foodtracker.databinding.FragmentHomeBinding;
 
@@ -20,6 +23,7 @@ public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
     private FragmentHomeBinding binding;
+    View root;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -27,7 +31,7 @@ public class HomeFragment extends Fragment {
                 new ViewModelProvider(this).get(HomeViewModel.class);
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
+        root = binding.getRoot();
 
        /* final TextView textView = binding.textHome;
         homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
@@ -42,6 +46,7 @@ public class HomeFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        init();
 
     }
     private void init(){
@@ -71,7 +76,9 @@ public class HomeFragment extends Fragment {
         });
     }
     private void moveToAddFoodRecord(int value){
-        //findNavController().navigate(HomeFragmentDirections.toAddfood(value))
+        Bundle bundle = new Bundle();
+        bundle.putInt("value", value);
+        Navigation.findNavController(root).navigate(R.id.toAddfood,bundle);
     }
 
     @Override
