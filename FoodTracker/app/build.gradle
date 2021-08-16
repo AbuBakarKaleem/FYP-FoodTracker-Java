@@ -58,6 +58,7 @@ dependencies {
     implementation "androidx.preference:preference-ktx:1.1.1"
     implementation 'com.google.code.gson:gson:2.8.7'
     implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.opencsv:opencsv:4.6'
 
     implementation 'com.opencsv:opencsv:4.6'
     //noinspection GradleCompatible
