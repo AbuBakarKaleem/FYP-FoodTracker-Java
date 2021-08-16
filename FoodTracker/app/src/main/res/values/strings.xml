@@ -46,4 +46,5 @@
     <string name="invalidEmailOrPassword">Invalid Email Or Password</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="share_all">Share all</string>
 </resources>

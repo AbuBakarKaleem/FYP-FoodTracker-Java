@@ -22,6 +22,17 @@
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/checkbox_shareAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/share_all"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/rc_mealHistory"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rc_mealHistory"
         android:layout_width="match_parent"
@@ -29,7 +40,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/btn_share"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/checkbox_shareAll"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_share"

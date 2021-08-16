@@ -19,6 +19,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
 import android.widget.TextView;
 
 import com.app.foodtracker.Interface.HistoryItemClickListener;
@@ -42,6 +43,7 @@ public class HistoryFragment extends Fragment implements HistoryItemClickListene
     private HistoryFragmentBinding binding;
     private View rootView;
     private ProgressDialog progressDialog;
+    private ArrayList<MealRecord> mainHistoryList;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
@@ -60,6 +62,7 @@ public class HistoryFragment extends Fragment implements HistoryItemClickListene
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         init();
+        listener();
 
     }
 
@@ -68,9 +71,9 @@ public class HistoryFragment extends Fragment implements HistoryItemClickListene
             mViewModel = new ViewModelProvider(this).get(HistoryViewModel.class);
             progressDialog = new ProgressDialog(rootView.getContext());
             progressDialog.setMessage("Processing..");
-            ArrayList<MealRecord> historyList = (ArrayList<MealRecord>) mViewModel.getMealRecords(rootView.getContext());
-            if (historyList.size() > 0) {
-                populateRecyclerView(historyList);
+            mainHistoryList = (ArrayList<MealRecord>) mViewModel.getMealRecords(rootView.getContext());
+            if (mainHistoryList.size() > 0) {
+                populateRecyclerView(mainHistoryList);
 
             } else {
                 hideShareButtonAndRecyclerView();
@@ -80,6 +83,20 @@ public class HistoryFragment extends Fragment implements HistoryItemClickListene
         }
 
 
+    }
+
+    private void listener() {
+        binding.checkboxShareAll.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    if (mainHistoryList.size() > 0) {
+                        listToCSV(mainHistoryList);
+                    }
+                }
+
+            }
+        });
     }
 
     private void populateRecyclerView(ArrayList<MealRecord> list) {
@@ -95,6 +112,7 @@ public class HistoryFragment extends Fragment implements HistoryItemClickListene
 
     private void hideShareButtonAndRecyclerView() {
         binding.rcMealHistory.setVisibility(View.GONE);
+        binding.checkboxShareAll.setVisibility(View.GONE);
         binding.tvNoDataFound.setVisibility(View.VISIBLE);
     }
 
@@ -128,7 +146,7 @@ public class HistoryFragment extends Fragment implements HistoryItemClickListene
                 StringBuilder stringBuilder = new StringBuilder();
                 ArrayList<String[]> finalList = new ArrayList<>();
                 String[] strValue = new String[1];
-                for (int i=0;i<historyList.size();i++) {
+                for (int i = 0; i < historyList.size(); i++) {
 
                     stringBuilder.append(historyList.get(i).getMealType());
                     stringBuilder.append(",");
@@ -137,7 +155,7 @@ public class HistoryFragment extends Fragment implements HistoryItemClickListene
                     stringBuilder.append(historyList.get(i).getMealDescription());
                     stringBuilder.append("\n");
 
-                    strValue[0]=stringBuilder.toString();
+                    strValue[0] = stringBuilder.toString();
                     finalList.add(strValue);
                 }
                 CSVWriter writer = new CSVWriter(new FileWriter(csvFilePath));
@@ -185,6 +203,7 @@ public class HistoryFragment extends Fragment implements HistoryItemClickListene
             Log.e("App", e.getMessage().toString());
         } finally {
             hideProdressBar();
+            binding.checkboxShareAll.setChecked(false);
         }
     }
 
