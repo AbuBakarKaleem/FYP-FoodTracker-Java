@@ -39,7 +39,7 @@ public class MealHistoryRecyclerViewAdapter extends RecyclerView.Adapter<MealHis
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         try {
             MealRecord mealData = mealList.get(position);
-            holder.tv_itemMealType.setText(mealData.getMealDate());
+            holder.tv_itemMealType.setText(mealData.getMealType());
             holder.tv_itemMealDescription.setText(mealData.getMealDescription());
             holder.tv_itemMealDateTime.setText(mealData.getMealDate() + " " + mealData.getMealTime());
             holder.ll_base.setOnClickListener(new View.OnClickListener() {
